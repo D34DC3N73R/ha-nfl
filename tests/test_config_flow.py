@@ -9,7 +9,7 @@ from pytest_homeassistant_custom_component.common import MockConfigEntry
 from custom_components.nfl.const import CONF_TEAM_ID, DOMAIN
 
 
-@pytest.mark.parametrize(
+@pytest_asyncio.mark.parametrize(
     "input,step_id,title,data",
     [
         (
