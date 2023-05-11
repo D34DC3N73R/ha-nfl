@@ -2,6 +2,7 @@
 from tests.const import CONFIG_DATA
 from unittest.mock import patch
 import pytest
+import pytest_asyncio
 from homeassistant import config_entries, data_entry_flow, setup
 from homeassistant.const import CONF_NAME
 from pytest_homeassistant_custom_component.common import MockConfigEntry
@@ -9,7 +10,7 @@ from pytest_homeassistant_custom_component.common import MockConfigEntry
 from custom_components.nfl.const import CONF_TEAM_ID, DOMAIN
 
 
-@pytest.mark.parametrize(
+@pytest_asyncio.mark.parametrize(
     "input,step_id,title,data",
     [
         (
