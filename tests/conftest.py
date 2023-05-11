@@ -1,6 +1,5 @@
 """Fixtures for tests"""
 import pytest
-import asyncio
 
 pytest_plugins = ("pytest_homeassistant_custom_component", "pytest_asyncio")
 
